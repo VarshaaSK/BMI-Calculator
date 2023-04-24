@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.5s ease;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+/* body {
+    background-image: linear-gradient( to bottom right, rgba(79,51,176,1.0),rgba(210,53,165));
+} */
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    margin-top: -57px;
+}
+
+.under-popup, .normal-popup, .over-popup, .obese-popup, .eobese-popup{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-family: 'Poppins',sans-serif;
+    transform: translate(-50% , -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-under-popup , .open-normal-popup , .open-over-popup, .open-obese-popup, .open-eobese-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.thank{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+/* .under-popup p{
+    margin-top: 10px;
+} */
+
+.popup-btn{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #10035a;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+
+.normal-popup button{
+    background: #aad8ee;
+}
+
+.over-popup button{
+    background: #f1a33d;
+}
+
+.obese-popup button{
+    background: #e09129;
+}
+
+.eobese-popup button{
+    background: #f56060;
+}
+
+.calculator{
+    position: relative;
+    height: auto;
+    width: 417px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000;
+}
+
+td{
+    font-size: 20px;
+}
+
+.content input{
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    width: 287px;
+    font-size: 20px;
+}
+
+.theme-toggler{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.theme-toggler.active{
+    color: #333;
+}
+
+.theme-toggler.active::before{
+    background-color: #fff;
+}
+
+.theme-toggler::before{
+    content: '';
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    border-radius: 50%;
+    background-color: #333;
+    z-index: -1;
+}
+
+#display{
+    margin: 0 10px;
+    height: 80px;
+    width: auto;
+    /* max-width: 270px; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 20px;
+    margin-bottom: -22px;
+}
+
+.gender{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.gender input{
+    width: 28px;
+}
+
+.representation{
+    /* display: grid;
+    place-items: center;
+    direction: rtl; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -114px;
+    gap: 10px;
+}
+
+.representation .btn{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #071115;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.representation .btn:hover{
+    background: white;
+    border: 1px dashed #071115;
+    color: #071115;
+}
+
+.representation img{
+    border:3px solid #f1d1e5;
+}
+
+.active{
+    display: block;
+}
+
+.inactive{
+    display: none;
+}
+
+
+
+
+/*light theme*/
+
+.calculator{
+    background-color: #fff;
+}
+
+.calculator #display{
+    color: #0a1e23;
+}
+
+.content input{
+    border: 1px dotted #000;
+}
+
+.calculator #totalvalue{
+    color: #ffffff;
+}
+
+.calculator .gender{
+    color: #000;
+}
+
+
+
+/*dark theme*/
+
+.calculator.dark{
+    background-color: #071115;
+}
+
+.calculator .dark .gender{
+    color: #fff;
+}
+
+.calculator.dark #display{
+    color: #f8fafb;
+}
+
+.calculator.dark td{
+    color: #ffffff;
+}
+
+.calculator.dark label{
+    color: #ffffff;
+}
+
+
+
+
+

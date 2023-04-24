@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator dark">
+            <div class="theme-toggler active">
+                <i class="toggler-icon"></i>
+            </div>
+            <div class="display-screen">
+                <div id="display"><h1>BMI Calculator</h1></div>
+            </div>
+            <div class="content">
+                <table>
+                    <tr>
+                        <td>Age : </td>
+                        <td>
+                            <input type="number" id="amount" onchange="calculate()" placeholder="Age"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Height :</td>
+                        <td>
+                            <input type="number" id="rate" onchange="calculate()" placeholder="cm"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Weight :
+                        </td>
+                        <td>
+                            <input type="number" id="months" onchange="calculate()" placeholder="kg"/>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <h1 id="totalvalue"></h1>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="gender">
+                <div>
+                    <input type="radio" name="sample" id="m"/><label for="m" >Male</label>
+                    <input type="radio" name="sample" id="f"/><label for="f">Female</label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="under-popup" id="under-popup">
+            <img class="popup-img" src="Images/underweight.PNG">
+            <h2 class="thank">You have to gain Weight</h2>
+            <p>Under Weight!</p>
+            <button type="button" class="popup-btn" onclick="closeUnderPopup()">Ok</button>
+        </div>
+
+        <div class="normal-popup" id="normal-popup">
+            <img class="popup-img" src="Images/normal.png">
+            <h2 class="thank">You are Healthy</h2>
+            <p>Normal Weight :)</p>
+            <button type="button" class="popup-btn" onclick="closeNormalPopup()">Ok</button>
+        </div>
+
+        <div class="over-popup" id="over-popup">
+            <img class="popup-img" src="Images/overweight.png">
+            <h2 class="thank">Your Weight is High</h2>
+            <p>OverWeight :(</p>
+            <button type="button" class="popup-btn" onclick="closeOverPopup()">Ok</button>
+        </div>
+
+        <div class="obese-popup" id="obese-popup">
+            <img class="popup-img" src="Images/obese.png">
+            <h2 class="thank">You are Obese</h2>
+            <p>Have to reduce Weight!</p>
+            <button type="button" class="popup-btn" onclick="closeObesePopup()">Ok</button>
+        </div>
+
+        <div class="eobese-popup" id="eobese-popup">
+            <img class="popup-img" src="Images/extremely_obese.png">
+            <h2 class="thank">You are Extremly Obese</h2>
+            <p>Work hard to reduce Weight!</p>
+            <button type="button" class="popup-btn" onclick="closeEObesePopup()">Ok</button>
+        </div>
+        
+    </div>
+
+    <div class="representation">
+        <!-- <img src="Images/underweight.PNG" class="under active"/>
+        <img src="Images/normal.png" class="normal"/>
+        <img src="Images/overweight.png" class="overweight"/>
+        <img src="Images/obese.png" class="obese">
+        <img src="Images/extremely_obese.png" class="eobese"/> -->
+        <button class="btn" type="submit" onclick="healthStatus()">Health Status</button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
